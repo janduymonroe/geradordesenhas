@@ -1,9 +1,20 @@
 import random, string
 
-tamanho = 16
+while True:
+    try:
 
-chars = string.ascii_letters + string.digits + '!ç@#$%*()-=+_,.;:\/|{}[]~'
+        length = int(input("How many characters you wish on your password: "))
 
-rnd = random.SystemRandom()
+    except:
 
-print("".join(rnd.choice(chars) for i in range (tamanho)))
+        print("You need to type numbers only.")
+
+    else:
+
+        chars = string.ascii_letters + string.digits + '!ç@#$%*()-=+_,.;:\/|{}[]~'
+
+        rnd = random.SystemRandom()
+
+        print("".join(rnd.choice(chars) for i in range (length)))
+
+        break
